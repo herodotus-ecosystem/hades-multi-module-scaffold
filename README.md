@@ -77,6 +77,8 @@ hades-platform<br/>
 ### License
 ( Apache License v2.0 )
 
+> 后续视情况，逐步开放Security版以及微服务版
+
  
  
  
