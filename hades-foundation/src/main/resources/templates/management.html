@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/backstage/layout}">
+<body>
+    <section class="content" layout:fragment="content">
+        <div class="container-fluid">
+            <div id="mycontent" class="block-header">
+                <h2>BLANK PAGE</h2>
+                <input id="renameInput" type="text" class="form-control" name="rename" value="123"/>
+                <button id="btnabc"  type="button" class="btn btn-primary m-t-15 waves-effect">test</button>
+            </div>
+        </div>
+    </section>
+    <script>
+
+    </script>
+    <th:block layout:fragment="script">
+        <script th:src="@{/features/security/test.js}"></script>
+    </th:block>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="login-bg" style="background-image: url('/components/detailadmin/img/bgs/11.jpg');"
+      xmlns:th="http://www.thymeleaf.org">
+    <title>用户登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" th:href="@{/components/detailadmin/css/bootstrap/bootstrap.css}"/>
+    <link th:href="@{/components/detailadmin/css/bootstrap/bootstrap-overrides.css}" type="text/css" rel="stylesheet"/>
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" th:href="@{/components/detailadmin/css/compiled/layout.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/components/detailadmin/css/compiled/elements.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/components/detailadmin/css/compiled/icons.css}"/>
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" th:href="@{/components/font-awesome/css/font-awesome.css}"/>
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" th:href="@{/components/detailadmin/css/compiled/signin.css}" type="text/css" media="screen"/>
+
+    <!-- open sans font -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,600,700,800'-->
+          <!--rel='stylesheet' type='text/css'/>-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg-1">
+
+    <!-- background switcher -->
+    <div class="bg-switch visible-desktop" style="display: none">
+        <div class="bgs" >
+            <a href="#" data-img="landscape.jpg" class="bg active">
+                <img th:src="@{/components/detailadmin/img/bgs/landscape.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="blueish.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/blueish.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="7.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/7.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="8.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/8.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="9.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/9.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="10.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/10.jpg}" alt="background"/>
+            </a>
+            <a href="#" data-img="11.jpg" class="bg">
+                <img th:src="@{/components/detailadmin/img/bgs/11.jpg}" alt="background"/>
+            </a>
+        </div>
+    </div>
+
+    <!-- Wrap all page content here -->
+    <div class="login-wrapper">
+
+        <a href="../../../../../hades-application/src/main/resources/templates/home.html">
+            <img class="logo" th:src="@{/components/detailadmin/img/logo-white.png}" alt="logo"/>
+        </a>
+
+        <div class="box">
+            <div class="content-wrap">
+                <h6>系统登录</h6>
+                <form id="form-signin" th:action="@{/login}" method="POST">
+                    <div th:if="${description ne null}" class="alert alert-danger">
+                        <i class="icon-remove-sign"></i>
+                        <strong th:inline="text">[[${description}]]</strong>
+                    </div>
+                    <input type="text" class="form-control" name="userName" placeholder="用户名">
+                    <input type="password" class="form-control" name="password" placeholder="密码">
+                    <a href="#" class="forgot">Forgot password?</a>
+                    <div class="remember">
+                        <input type="checkbox" value="1" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn-glow primary login">登录</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="no-account">
+            <p>Don't have an account?</p>
+            <a href="signup.html">Sign up</a>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script th:src="@{/components/jquery/dist/jquery.min.js}"></script>
+    <script th:src="@{/components/detailadmin/js/bootstrap.min.js}"></script>
+    <script th:src="@{/components/detailadmin/js/theme.js}"></script>
+
+    <!-- pre load bg imgs -->
+    <script type="text/javascript">
+
+        function kickout() {
+            var href = location.href;
+            if (href.indexOf("kickout") > 0) {
+                alert("您的账号在另一台设备上登录,如非本人操作，请立即修改密码！");
+            }
+        }
+
+        window.onload = kickout();
+
+
+        $(function () {
+            // bg switcher
+            var $btns = $(".bg-switch .bg");
+            $btns.click(function (e) {
+                e.preventDefault();
+                $btns.removeClass("active");
+                $(this).addClass("active");
+                var bg = $(this).data("img");
+
+                $("html").css("background-image", "url('/components/detailadmin/img/bgs/" + bg + "')");
+            });
+
+        });
+    </script>
+</body>
+</html>

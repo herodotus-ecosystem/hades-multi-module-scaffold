@@ -1,0 +1,7 @@
+CREATE USER framework WITH PASSWORD 'Felix!QAZ2wsx';
+CREATE DATABASE partybranch OWNER framework;
+GRANT ALL PRIVILEGES ON DATABASE partybranch TO framework;
+
+CREATE USER framework WITH PASSWORD 'framework';
+CREATE DATABASE framework OWNER framework;
+GRANT ALL PRIVILEGES ON DATABASE framework TO framework;

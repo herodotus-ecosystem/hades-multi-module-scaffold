@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- Left Sidebar -->
+    <aside th:fragment="leftsidebar" id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="user-info">
+            <div class="image">
+                <img th:src="@{/components/adminbsb/images/user.png}" width="48" height="48" alt="User"/>
+            </div>
+            <div class="info-container">
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:inline="text">[[${current_user_name}]]</div>
+                <div class="email">john.doe@example.com</div>
+                <div class="btn-group user-helper-dropdown">
+                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#changePasswordModal"><i class="material-icons">lock_outline</i>修改密码</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a th:href="@{/logout}"><i class="material-icons">input</i>退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #User Info -->
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li class="header">功能导航</li>
+                <li th:each="menu, menuStat:${menus}">
+                    <a th:href="${menu.url ne null ? menu.url : 'javascript:void(0);'}" th:class="${#lists.size(menu.children) gt 0} ? 'menu-toggle' : ''">
+                        <i class="material-icons" th:inline="text">[[${menu.menuClass}]]</i>
+                        <span th:inline="text">[[${menu.permissionName}]]</span>
+                    </a>
+                    <ul class="ml-menu" th:if="${#lists.size(menu.children) gt 0}">
+                        <li th:each="child:${menu.children}" th:attr="data-name=${child.permissionName}">
+                            <a th:href="@{${child.url}}" th:inline="text">[[${child.permissionName}]]</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <!--<div class="legal">-->
+            <!--<div class="copyright">-->
+                <!--&copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.-->
+            <!--</div>-->
+            <!--<div class="version">-->
+                <!--<b>Version: </b> 1.0.5-->
+            <!--</div>-->
+        <!--</div>-->
+        <!-- #Footer -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+</body>
+</html>

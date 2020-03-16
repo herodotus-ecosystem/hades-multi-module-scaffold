@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+    <div class="header">
+        <h2 th:utext="${isEdit ? '创建用户' : '编辑用户'}">创建用户</h2>
+    </div>
+    <div class="body">
+        <form id="form" class="form-horizontal">
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="userName">用户名</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="userName" name="userName" class="form-control" placeholder="输入用户名称" th:value="${bean?.userName}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="passWord1">设置密码</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="passWord1" name="passWord1" class="form-control" placeholder="输入密码"  th:value="${bean?.password}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="passWord1">再次确认密码</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="passWord2" name="passWord2" class="form-control" placeholder="再次确认密码">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                    <input type="hidden" id="uid" name="uid" th:value="${bean?.uid}">
+                    <button data-name="saveOrUpdate" type="button" class="btn btn-primary m-t-15 waves-effect">保存</button>
+                    <button data-name="back" type="button" class="btn btn-primary m-t-15 waves-effect">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

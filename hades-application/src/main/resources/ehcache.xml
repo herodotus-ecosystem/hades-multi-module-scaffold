@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2019. All Rights Reserved
+  ~ ProjectName: hades-multi-module
+  ~ FileName: ehcache.xml
+  ~ Author: gengwei.zheng
+  ~ Date: 19-3-30 下午2:52
+  ~ LastModified: 19-3-30 下午2:37
+  -->
+
+<config
+        xmlns:jsr107='http://www.ehcache.org/v3/jsr107'
+        xmlns='http://www.ehcache.org/v3'>
+    <!--指定缓存目录-->
+    <service>
+        <jsr107:defaults enable-management="true" enable-statistics="true">
+            <jsr107:cache name="system" template="default"/>
+        </jsr107:defaults>
+    </service>
+
+    <persistence directory="${java.io.tmpdir}/hades-cache-data"/>
+
+    <event-dispatch thread-pool="events-pool"/>
+
+    <!--缓存模板-->
+    <cache-template name="default">
+        <listeners>
+            <listener>
+                <class>cn.com.felix.core.extend.cache.ehcache.EhcacheEventLisener</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <!--堆内内存可以放2000个条目，超出部分堆外100MB-->
+            <heap unit="entries">2000</heap>
+            <offheap unit="MB">100</offheap>
+        </resources>
+    </cache-template>
+
+    <cache alias="default-query-results-region">
+        <expiry>
+            <tti unit="seconds">300</tti>
+        </expiry>
+        <heap>1024</heap>
+    </cache>
+
+    <cache alias="default-update-timestamps-region">
+        <expiry>
+            <tti unit="seconds">300</tti>
+        </expiry>
+        <heap>4096</heap>
+    </cache>
+
+    <!--下面两个继承了default缓存模板，但覆盖了缓存的过期时间-->
+    <cache alias="SysUser" uses-template="default">
+        <expiry>
+            <ttl unit="hours">1</ttl>
+        </expiry>
+    </cache>
+
+    <cache alias="SysRole" uses-template="default">
+        <expiry>
+            <ttl unit="hours">1</ttl>
+        </expiry>
+    </cache>
+
+    <cache alias="SysPermission" uses-template="default">
+        <expiry>
+            <ttl unit="hours">1</ttl>
+        </expiry>
+    </cache>
+</config>

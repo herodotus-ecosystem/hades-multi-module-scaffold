@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="header">
+        <h2 th:utext="${isEdit ? '编辑角色' : '创建角色'}">创建用户</h2>
+    </div>
+    <div class="body">
+        <form id="form" class="form-horizontal">
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="roleName">角色名称</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="roleName" name="roleName" class="form-control" placeholder="输入角色名称" th:value="${bean?.roleName}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="description">描述</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="description" name="description" class="form-control" placeholder="输入描述信息" th:value="${bean?.description}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="appid">小程序名称</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <select id="appid" name="appid" class="form-control show-tick">
+                            <option value="">-- 选择小程序 --</option>
+                            <!-- 注意 这里使用了 ModelAttribute
+                             * 注意此方法如果在使用方变更了其中的属性值，会影响到数据
+                             * 所以不适用于需要解密，加密类的属性来使用
+                             * 便如组织列表、部门列表，会影响到结果，应该采用ajax请求数据的方式，
+                             * 但这个方法是真的方便-->
+                            <th:block th:each="weapp:${weapps}">
+                                <option th:value="${weapp.appid}" th:attr="data-subtext=${weapp.appid}" th:selected="${bean?.appid eq weapp.appid}" th:inline="text">[[${weapp.weappName}]]</option>
+                            </th:block>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5 ">
+                    <input type="checkbox" id="available" name="available" th:checked="${bean == null} ? true : ${bean.available}" class="filled-in">
+                    <label for="available">是否可用</label>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                    <input type="hidden" id="rid" name="rid" th:value="${bean?.rid}">
+                    <button data-name="saveOrUpdate" type="submit" class="btn btn-primary m-t-15 waves-effect">保存</button>
+                    <button data-name="back" type="button" class="btn btn-primary m-t-15 waves-effect">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

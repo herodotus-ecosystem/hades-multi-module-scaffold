@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script th:inline="javascript">
+    function checkEmpty(value) {
+        return value != undefined && value!="";
+    }
+
+    function deptChanged(){
+        document.getElementById("department.pkid").value = $("#deptid").val();
+        console.log(document.getElementById("department.pkid").value );
+        // document.getElementById("department.pkid").value = $("#deptid").val();
+        // alert($("#department.pkid").val());
+    }
+
+    var decFullName = [[${bean?.fullName}]];
+    if(checkEmpty(decFullName)){
+        decFullName =tools.Decrypt(decFullName)
+        $("#fullName").val(decFullName);
+    }
+    var decPhone = [[${bean?.phoneNumber}]];
+
+    if(checkEmpty(decPhone)){
+        decPhone =tools.Decrypt(decPhone)
+        $("#phoneNumber").val(decPhone);
+    }
+
+    var decTelephone = [[${bean?.telephone}]];
+
+    if(checkEmpty(decTelephone)){
+        decTelephone =tools.Decrypt(decTelephone)
+        $("#telephone").val(decTelephone);
+    }
+
+    var gender = [[${bean?.gender}]];
+    if(checkEmpty(gender)){
+        $("#gender").val(gender);
+    }
+
+    var hierarchy = [[${bean?.hierarchy}]];
+    if(checkEmpty(hierarchy)){
+        $("#hierarchy").val(hierarchy);
+    }
+
+    var identity = [[${bean?.identity}]];
+    if(checkEmpty(identity)){
+        $("#identity").val(identity);
+    }
+
+    var orgnizationId = [[${bean?.orgnizationId}]];
+    var deptobj = [[${bean?.department}]];
+    var editDeptPkid = deptobj!=null?deptobj.pkid:"";
+    $.post(orgPath + '/dropdownlistorg', {}, function (data) {
+        $("#orgnizationId").empty();
+        $("#orgnizationId").append("<option value=''>--请选择组织--</option>");
+        for (var prop in data.data) {
+            $("#orgnizationId").append("<option value='"+data.data[prop].pkid+"' data-subtext='"+data.data[prop].pkid+"'>"+tools.Decrypt(data.data[prop].orgnaizationName)+"</option>");
+        }
+        if(checkEmpty(orgnizationId)){
+            $("#orgnizationId").val(orgnizationId);
+        }
+        // 缺一不可
+        $('#orgnizationId').selectpicker('refresh');
+        $('#orgnizationId').selectpicker('render');
+        orgChanged(false,'orgnizationId','deptid');
+    }, 'json');
+</script>
+<body>
+<div class="header">
+    <h2 th:utext="${isEdit ? '编辑员工信息' : '创建员工信息'}">创建员工信息</h2>
+</div>
+<div class="body">
+    <form id="form" class="form-horizontal">
+        <!--组织-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="orgnizationId">所属组织</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <select id="orgnizationId" name="orgnizationId" class="form-control show-tick"  onchange="orgChanged(false,'orgnizationId','deptid')">
+                            <option value=''>--请选择组织--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--部门-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="deptid">所属部门</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <input type="hidden" id="department.pkid" class="hideDeptId" name="department.pkid" >
+                        <select id="deptid" name="deptid" class="form-control show-tick"  onchange="deptChanged()">
+                            <option value=''>--请选择部门--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--姓名-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="fullName">姓名</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="输入姓名" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--手机-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="phoneNumber">手机</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="输入手机" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--座机-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="telephone">座机</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <input type="text" id="telephone" name="telephone" class="form-control" placeholder="输入座机" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--性别-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="gender">性别</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <select id="gender" name="gender" class="form-control show-tick">
+                        <option value='MAN'>男</option>
+                        <option value='WOMAN'>女</option>
+                        <option value='OTHERS'>其它</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--民族-->
+        <!--出生年月-->
+        <!--参与工作时间-->
+        <!--入党时间-->
+        <!--文化程度-->
+        <!--技术职称-->
+        <!--层级-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="hierarchy">层级</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <select id="hierarchy" name="hierarchy" class="form-control show-tick">
+                        <option value='GRASS_ROOTS'>基层</option>
+                        <option value='MIDDLE'>中层</option>
+                        <option value='SENIOR'>高层</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--身份-->
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="identity">身份</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <select id="identity" name="identity" class="form-control show-tick">
+                        <option value='STAFF'>员工</option>
+                        <option value='LEADERSHIP'>领导</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="ranking">排序</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                    <div class="form-line">
+                        <input type="text" id="ranking" name="ranking" class="form-control" placeholder="输入序号" th:value="${bean?.ranking}" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                <input type="hidden" id="pkid" name="pkid" th:value="${bean?.pkid}">
+                <button data-name="saveOrUpdate" type="submit" class="btn btn-primary m-t-15 waves-effect">保存</button>
+                <button data-name="back" type="button" class="btn btn-primary m-t-15 waves-effect">返回</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script th:inline="javascript">
+    $.post(orgPath + '/dropdownlistorg', {}, function (data) {
+        $("#queryOrgId").empty();
+        $("#queryOrgId").append("<option value=''>--请选择组织--</option>");
+        for (var prop in data.data) {
+            $("#queryOrgId").append("<option value='"+data.data[prop].pkid+"' data-subtext='"+data.data[prop].pkid+"'>"+tools.Decrypt(data.data[prop].orgnaizationName)+"</option>");
+        }
+        // 缺一不可
+        $('#queryOrgId').selectpicker('refresh');
+        $('#queryOrgId').selectpicker('render');
+
+    }, 'json');
+</script>
+<div class="header">
+    <h2>
+        人员列表
+        <small>对人员进行管理。</small>
+    </h2>
+</div>
+<div class="body">
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-sm-2 button-demo ">
+                <button data-name="show-save" type="button" class="btn btn-success waves-effect">新增</button>
+            </div>
+
+            <label for="queryOrgId" class="col-sm-1 control-label">组织</label>
+            <div class="col-sm-3">
+                <select id="queryOrgId" name="queryOrgId" class="form-control show-tick"  onchange="orgChanged(true,'queryOrgId','queryDeptId')">
+                    <option value=''>--请选择组织--</option>
+                </select>
+            </div>
+            <label for="queryDeptId" class="col-sm-1 control-label">部门</label>
+            <div class="col-sm-3">
+                <select id="queryDeptId" name="queryDeptId" class="form-control show-tick" onchange="reDraw()">
+                    <option value=''>--请选择部门--</option>
+                </select>
+            </div>
+        </div>
+<!--        <div class="col-lg-3">-->
+<!--            <div class="button-demo">-->
+<!--            <button data-name="show-save" type="button" class="btn btn-success waves-effect">新增</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-lg-3">-->
+
+
+<!--        </div>-->
+<!--        <div class="col-lg-3">-->
+<!--            <select id="queryDeptId" name="queryDeptId" class="form-control show-tick" onchange="reDraw()">-->
+<!--                <option value=''>&#45;&#45;请选择部门&#45;&#45;</option>-->
+<!--            </select>-->
+<!--        </div>-->
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover dataTable" id="empDataTable">
+            <thead>
+            <tr>
+                <th><input id="checkAll" class="filled-in chk-col-blue-grey" type="checkbox" value=""><label for="checkAll"></label></th>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>部门</th>
+                <th>座机</th>
+                <th>手机</th>
+                <th>性别</th>
+                <th>民族</th>
+                <th>生日</th>
+                <th>参加工作</th>
+                <th>入党时间</th>
+                <th>文化程度</th>
+                <th>技术职称</th>
+                <th>层级</th>
+                <th>身份</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

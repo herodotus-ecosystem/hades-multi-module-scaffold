@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- 基本信息 -->
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>hades-platform</artifactId>
+    <packaging>pom</packaging>
+    <version>1.1.0</version>
+
+    <name>hades-platform</name>
+    <description>Hades Multi Module project for Spring Boot</description>
+
+    <parent>
+        <groupId>cn.com.felix</groupId>
+        <artifactId>hades-dependencies</artifactId>
+        <version>1.1.0</version>
+        <relativePath>hades-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <!-- 所有的子项目默认依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${alibaba.fastjson.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 管理依赖版本号,子项目不会默认依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-rbac</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-kernel</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-foundation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>hades-bpmn</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>hades-dependencies</module>
+        <module>hades-common</module>
+        <module>hades-data</module>
+        <module>hades-kernel</module>
+        <module>hades-foundation</module>
+        <module>hades-bpmn</module>
+        <module>hades-application</module>
+    </modules>
+</project>

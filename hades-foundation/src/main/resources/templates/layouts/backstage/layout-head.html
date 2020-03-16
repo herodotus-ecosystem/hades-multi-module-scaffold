@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:fragment="layout-head">
+    <title>后台管理</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext}" rel="stylesheet" type="text/css">
+    <!--<link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}" rel="stylesheet" type="text/css">-->
+    <link th:href="@{/plugins/material-design-icons/material-icons.css}" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link th:href="@{/plugins/bootstrap/css/bootstrap.css}" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link th:href="@{/plugins/node-waves/waves.css}" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link th:href="@{/plugins/animate-css/animate.css}" rel="stylesheet" />
+    <!-- Sweet Alert Css -->
+    <link th:href="@{/plugins/sweetalert/sweetalert.css}" rel="stylesheet" />
+    <!-- JQuery DataTable Css -->
+    <link th:href="@{/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css}" rel="stylesheet">
+    <!-- Bootstrap Select Css -->
+    <link th:href="@{/plugins/bootstrap-select/css/bootstrap-select.css}" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link th:href="@{/components/adminbsb/css/style.css}" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link th:href="@{/components/adminbsb/css/themes/all-themes.css}" rel="stylesheet" />
+    <link th:href="@{/plugins/ztree/css/metroStyle/metroStyle.css}" rel="stylesheet" />
+    <!-- wang editor -->
+    <link th:href="@{/plugins/wangEditor/wangEditor.css}" rel="stylesheet" />
+
+    <script type="text/javascript" th:inline="javascript">
+        var context_path = [[${#request.contextPath}]];
+    </script>
+</head>
+</html>

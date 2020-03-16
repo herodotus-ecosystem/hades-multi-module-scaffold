@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="header">
+        <h2 th:utext="${isEdit ? '编辑权限' : '创建权限'}">创建用户</h2>
+    </div>
+    <div class="body">
+        <form id="form" class="form-horizontal">
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="permissionName">功能名称</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="permissionName" name="permissionName" class="form-control" placeholder="输入权限名称" th:value="${bean?.permissionName}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="permission">功能</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="permission" name="permission" class="form-control" placeholder="输入权限值" th:value="${bean?.permission}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="parentId">上级节点</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <select id="parentId" name="parentId" class="form-control show-tick">
+                            <option value="">-- 选择上级节点 --</option>
+                            <th:block th:each="permission:${permissions}">
+                                <option th:value="${permission.pid}" th:attr="data-subtext=${permission.url}" th:selected="${bean?.parent?.pid eq permission.pid}" th:inline="text">[[${permission.permissionName}]]</option>
+                            </th:block>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="url">URL</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="url" name="url" class="form-control" placeholder="输入权限路径" th:value="${bean?.url}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label>权限类型</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <input type="radio" name="resourceType" id="menu" value="menu" th:checked="${bean == null} ? true : ${bean.resourceType eq 'menu'}" class="with-gap">
+                        <label for="menu">menu</label>
+
+                        <input type="radio" name="resourceType" id="auth" value="auth" th:checked="${bean == null} ? false : ${bean.resourceType eq 'auth'}" class="with-gap">
+                        <label for="auth" class="m-l-20">auth</label>
+
+                        <input type="radio" name="resourceType" id="weapp" value="weapp" th:checked="${bean == null} ? false : ${bean.resourceType eq 'weapp'}" class="with-gap">
+                        <label for="weapp" class="m-l-20">weapp</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="menuClass">菜单样式</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="menuClass" name="menuClass" class="form-control" placeholder="输入功能图标样式" value="widgets" th:value="${bean?.menuClass}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5 ">
+                    <input type="checkbox" id="available" name="available" th:checked="${bean == null} ? true : ${bean.available}" class="filled-in">
+                    <label for="available">是否可用</label>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                    <input type="hidden" id="pid" name="pid" th:value="${bean?.pid}">
+                    <button data-name="saveOrUpdate" type="submit" class="btn btn-primary m-t-15 waves-effect">保存</button>
+                    <button data-name="back" type="button" class="btn btn-primary m-t-15 waves-effect">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

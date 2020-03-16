@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:include="/layouts/backstage/layout-head :: layout-head"></head>
+
+<body class="theme-indigo">
+    <script layout:fragment="script-on-head"></script>
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+
+    <!-- Top Bar -->
+    <nav th:replace="/layouts/backstage/navbar :: navbar"></nav>
+    <!-- #Top Bar -->
+
+    <section>
+        <aside th:replace="/layouts/backstage/leftsidebar :: leftsidebar"></aside>
+
+        <aside th:replace="/layouts/backstage/rightsidebar :: rightsidebar"></aside>
+    </section>
+
+    <section layout:fragment="content"></section>
+
+    <div th:replace="/layouts/backstage/info-model :: info-model"></div>
+
+    <div th:replace="/layouts/backstage/layout-js :: layout-js"></div>
+
+    <th:block layout:fragment="script"></th:block>
+</body>
+</html>

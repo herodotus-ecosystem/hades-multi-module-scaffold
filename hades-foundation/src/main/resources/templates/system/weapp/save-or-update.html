@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="header">
+        <h2 th:utext="${isEdit ? '创建小程序' : '编辑小程序'}">创建小程序</h2>
+    </div>
+    <div class="body">
+        <form id="form" class="form-horizontal">
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="weappName">小程序名称</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="weappName" name="weappName" class="form-control" placeholder="输入小程序名称" th:value="${bean?.weappName}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                    <label for="appid">AppID</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                        <div class="form-line">
+                            <input type="text" id="appid" name="appid" class="form-control" placeholder="输入AppID" th:value="${bean?.appid}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5 ">
+                    <input type="checkbox" id="available" name="available" th:checked="${bean == null} ? true : ${bean.available}" class="filled-in">
+                    <label for="available">是否可用</label>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                    <input type="hidden" id="wid" name="wid" th:value="${bean?.wid}">
+                    <button data-name="saveOrUpdate" type="submit" class="btn btn-primary m-t-15 waves-effect">保存</button>
+                    <button data-name="back" type="button" class="btn btn-primary m-t-15 waves-effect">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
