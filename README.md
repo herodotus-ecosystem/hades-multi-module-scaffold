@@ -22,11 +22,16 @@
 1. 安装数据库
 2. 将配置文件中spring.jpa.hibernate.ddl-auto 修改为create。（其它SQL文件，见hades-foundation/src/resources/sql）
 3. hades-platform中， mvn clean install
-4. 开发环境配置加密，可以在hades-application的HadesWebApplicationTests进行测试和修改
+4. 运行: http://localhost:9999
+5. 开发环境配置加密，可以在hades-application的HadesWebApplicationTests进行测试和修改
 
 ### 默认账户
 - 前台 administrator 123456
 - 后台 system 123456
+
+### 界面预览
+![登录界面](https://images.gitee.com/uploads/images/2020/0316/182215_68f07c3d_751495.png "微信截图_20200316181847.png")
+![主界面](https://images.gitee.com/uploads/images/2020/0316/182235_f930e567_751495.png "微信截图_20200316181847.png")
 
 ### 核心依赖
 依赖 | 版本
@@ -63,6 +68,12 @@ hades-platform<br/>
  |- hades-foundation 应用相关代码模块<br/>
  |- hades-bpmn flowable-modeler集成模块<br/>
  
+### 交流方式
+1. 欢迎提交[issue](https://gitee.com/pointer_v/hades-multi-module-scaffold/issues)， 请写清楚遇到问题的原因、开发环境、重现步骤
+2. QQ：113797117
+3. mailto:pointer_v@qq.com
+4. CSDN: https://blog.csdn.net/Pointer_v
+
 ### License
 ( Apache License v2.0 )
 
