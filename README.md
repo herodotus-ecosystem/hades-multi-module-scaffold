@@ -60,13 +60,13 @@ Postgresql | > 10
 
 ### 模块说明
 hades-platform<br/>
- |- hades-application 工程运行和实验模块<br/>
- |- hades-dependencies 依赖管理<br/>
- |- hades-common 通用代码模块<br/>
- |- hades-data 数据相关通用代码模块<br/>
- |- hades-kernel 核心配置模块<br/>
- |- hades-foundation 应用相关代码模块<br/>
- |- hades-bpmn flowable-modeler集成模块<br/>
+  |- hades-application 工程运行和实验模块<br/>
+  |- hades-dependencies 依赖管理<br/>
+  |- hades-common 通用代码模块<br/>
+  |- hades-data 数据相关通用代码模块<br/>
+  |- hades-kernel 核心配置模块<br/>
+  |- hades-foundation 应用相关代码模块<br/>
+  |- hades-bpmn flowable-modeler集成模块<br/>
  
 ### 交流方式
 1. 欢迎提交[issue](https://gitee.com/pointer_v/hades-multi-module-scaffold/issues)， 请写清楚遇到问题的原因、开发环境、重现步骤
