@@ -37,7 +37,7 @@
 依赖 | 版本
 ---|---
 Spring Boot | 2.1.9.RELEASE
-Shiro | 1.4.1
+Shiro | 1.5.2
 Flowable | 6.4.2
 weixin-java-miniapp | 3.3.5.B
 Postgresql | > 10 
