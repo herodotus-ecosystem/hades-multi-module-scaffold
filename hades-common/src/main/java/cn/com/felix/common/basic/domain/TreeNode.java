@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-common
  * File Name: TreeNode.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/11 下午8:01
  * LastModified: 2019/11/8 下午4:16
  */
@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * 属性结构定义
  *
- * @author gengwei.zheng
+ * @author hades
  */
 public class TreeNode extends AbstractDomain {
 

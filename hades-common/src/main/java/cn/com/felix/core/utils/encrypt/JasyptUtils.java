@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: JasyptUtils
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-1-20 下午4:10
  * LastModified: 19-1-20 下午4:10
  */
@@ -15,7 +15,7 @@ import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
 
 /**
  * @description : TODO
- * @author : gengwei.zheng
+ * @author : hades
  * @date : 2019/11/3 15:17
  */
 public class JasyptUtils {

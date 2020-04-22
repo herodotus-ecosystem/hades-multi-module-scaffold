@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-bpmn
  * File Name: EditorGroupsResource.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/2 下午2:20
  * LastModified: 2019/10/31 上午11:51
  */
@@ -52,7 +52,7 @@ import java.util.List;
 
 /**
  * Rest resource for managing groups, used in the editor app.
- * @author gengwei.zheng
+ * @author hades
  */
 @RestController
 @RequestMapping("/app")

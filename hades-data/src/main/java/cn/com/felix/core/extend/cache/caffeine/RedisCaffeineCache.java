@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: RedisCaffeineCache
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 上午11:16
  * LastModified: 19-3-30 上午11:16
  */
@@ -27,7 +27,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class RedisCaffeineCache extends AbstractValueAdaptingCache {

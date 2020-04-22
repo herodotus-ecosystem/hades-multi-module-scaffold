@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-web
  * File Name: ServletUtils.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/3 下午4:22
  * LastModified: 2019/10/26 下午1:02
  */
@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @description : Servlet工具类
- * @author : gengwei.zheng
+ * @author : hades
  * @date : 2019/11/3 16:22
  */
 public class ServletUtils {

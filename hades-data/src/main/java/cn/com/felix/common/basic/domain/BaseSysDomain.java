@@ -9,7 +9,7 @@ import javax.persistence.OrderBy;
 /**
  * <p>Description: 脚手架核心功能基础实体 </p>
  *
- * @author : gengwei.zheng
+ * @author : hades
  * @date : 2019/11/3 16:25
  */
 @MappedSuperclass

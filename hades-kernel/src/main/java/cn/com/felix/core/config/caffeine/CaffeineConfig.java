@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: CaffeineConfig
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 上午11:43
  * LastModified: 19-3-30 上午11:43
  */
@@ -23,7 +23,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class CaffeineConfig {

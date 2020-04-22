@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-bpmn
  * File Name: SecurityUtils.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/2 下午2:20
  * LastModified: 2019/10/31 上午11:50
  */
@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author : gengwei.zheng
+ * @author : hades
  * @description : 覆盖Flowable的SecurityUtis，设置默认用户值
  * @date : 2019/10/28 17:55
  */

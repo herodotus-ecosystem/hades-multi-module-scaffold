@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-foundation
  * File Name: DynamicShiroFilterFactoryBean.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/11 下午10:44
  * LastModified: 2019/11/11 下午10:43
  */
@@ -56,7 +56,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author : gengwei.zheng
+ * @author : hades
  * @description : TODO
  * @date : 2019/11/11 16:04
  */

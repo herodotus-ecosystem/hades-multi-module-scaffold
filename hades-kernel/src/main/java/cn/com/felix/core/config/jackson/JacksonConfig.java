@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: JacksonConfig
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-20 下午3:05
  * LastModified: 19-3-20 下午3:05
  */
@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
  * @link：https://blog.csdn.net/lvhaoguang0/article/details/86014402
  * </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/20
  */
 @Configuration

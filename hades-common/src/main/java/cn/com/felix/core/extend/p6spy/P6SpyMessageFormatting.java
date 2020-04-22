@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: P6SpyMessageFormat
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-1-20 下午6:21
  * LastModified: 19-1-20 下午6:21
  */
@@ -18,7 +18,7 @@ import java.util.Date;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/1/20
  */
 public class P6SpyMessageFormatting implements MessageFormattingStrategy {

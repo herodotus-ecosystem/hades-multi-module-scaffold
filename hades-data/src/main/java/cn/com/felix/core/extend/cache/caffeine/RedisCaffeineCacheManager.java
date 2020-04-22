@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: RedisCaffeineCacheManager
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 上午11:17
  * LastModified: 19-3-30 上午11:17
  */
@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class RedisCaffeineCacheManager implements CacheManager {

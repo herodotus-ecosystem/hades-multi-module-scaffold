@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: DepartmentDTO
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-8 下午1:02
  * LastModified: 19-3-8 下午1:02
  */
@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/8
  */
 public class DepartmentDTO extends BaseDTO {

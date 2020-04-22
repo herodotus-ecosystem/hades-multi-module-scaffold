@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: WxUserDTO
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-29 上午10:20
  * LastModified: 18-12-25 下午5:23
  */

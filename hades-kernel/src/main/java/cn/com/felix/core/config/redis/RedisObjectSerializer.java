@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: RedisObjectSerializer
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-28 下午4:31
  * LastModified: 18-12-5 上午11:50
  */

@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: SecurityTools
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-19 下午12:45
  * LastModified: 19-3-19 下午12:45
  */
@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/19
  */
 @Slf4j

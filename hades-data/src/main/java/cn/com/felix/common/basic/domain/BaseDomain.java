@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * <p>Description: 应用功能基础实体 </p>
  *
- * @author : gengwei.zheng
+ * @author : hades
  * @date : 2019/11/3 16:24
  */
 @MappedSuperclass

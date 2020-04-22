@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: DepartmentRepository
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-2-14 下午3:59
  * LastModified: 19-2-14 下午3:59
  */
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/2/14
  */
 public interface OrgnizationRepository extends JpaRepository<Orgnization, String> {

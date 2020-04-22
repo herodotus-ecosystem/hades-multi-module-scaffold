@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-bpmn
  * File Name: RemoteAccountResource.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/2 下午2:20
  * LastModified: 2019/10/30 下午9:52
  */
@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author : gengwei.zheng
+ * @author : hades
  * @description : TODO
  * @date : 2019/10/28 18:10
  */

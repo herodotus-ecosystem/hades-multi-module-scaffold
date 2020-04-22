@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: Hierarchy
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-2-15 下午2:09
  * LastModified: 19-2-15 下午2:09
  */
@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/2/15
  */
 public enum Hierarchy {

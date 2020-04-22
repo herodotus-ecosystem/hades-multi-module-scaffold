@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: APISmsController
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-18 下午3:54
  * LastModified: 19-3-18 下午3:54
  */
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/18
  */
 @RestController

@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: RedisCaffeineProperties
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 上午10:15
  * LastModified: 19-3-30 上午10:15
  */
@@ -20,7 +20,7 @@ import java.util.Set;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class RedisCaffeineCacheProperties {

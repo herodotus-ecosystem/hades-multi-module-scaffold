@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-bpmn
  * File Name: EditorUsersResource.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/2 下午2:20
  * LastModified: 2019/10/30 下午9:52
  */

@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: SysWeappDefaultRole
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-11 下午2:48
  * LastModified: 19-3-11 下午2:47
  */
@@ -21,7 +21,7 @@ import javax.persistence.*;
  * 根据不同的单位，指定不同的默认角色
  * </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/11
  */
 

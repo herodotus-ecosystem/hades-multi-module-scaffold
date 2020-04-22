@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: DepartmentEmployeeDTO
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-8 上午10:45
  * LastModified: 19-3-8 上午10:45
  */
@@ -21,7 +21,7 @@ import static java.util.Comparator.comparing;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/8
  */
 public class DepartmentEmployeeDTO extends BaseDTO {

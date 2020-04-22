@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: JwtHashedCredentialsMatcher
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-28 下午5:07
  * LastModified: 18-12-28 下午5:07
  */
@@ -16,7 +16,7 @@ import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2018/12/28
  */
 public class JwtHashedCredentialsMatcher extends HashedCredentialsMatcher {

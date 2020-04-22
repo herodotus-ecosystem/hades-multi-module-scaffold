@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: String2ObjectGenericConverter
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-28 下午5:18
  * LastModified: 18-10-30 下午8:18
  */

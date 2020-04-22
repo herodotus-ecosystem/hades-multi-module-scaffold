@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: RedisConfig
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-28 下午4:28
  * LastModified: 18-12-28 下午4:26
  */

@@ -4,7 +4,7 @@
 package cn.com.felix.core.utils;
 
 /**
- * @author gengwei.zheng
+ * @author hades
  *
  */
 public class Constants {

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author gengwei.zheng
+ * @author hades
  */
 public enum Gender {
     OTHERS(0, "其它"),

@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: CacheEventLisener
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 下午3:00
  * LastModified: 19-3-30 下午3:00
  */
@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class EhcacheEventLisener implements CacheEventListener<Object, Object> {

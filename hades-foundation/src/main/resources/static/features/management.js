@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: management.js
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-30 上午9:20
  * LastModified: 18-12-30 上午9:20
  */

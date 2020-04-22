@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: QCloudSmsProperties
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-18 下午1:58
  * LastModified: 19-3-18 下午1:58
  */
@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/18
  */
 

@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-foundation
  * File Name: SecurityController.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/3 下午3:34
  * LastModified: 2019/11/2 下午8:31
  */

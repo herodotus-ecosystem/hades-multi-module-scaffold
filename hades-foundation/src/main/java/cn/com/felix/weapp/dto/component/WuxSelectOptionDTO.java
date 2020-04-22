@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: WuxSelectOptionDTO
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-2-15 下午2:51
  * LastModified: 19-2-15 下午2:51
  */
@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/2/15
  */
 public class WuxSelectOptionDTO extends BaseDTO {

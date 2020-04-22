@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: EmployeeDTO
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-8 上午10:54
  * LastModified: 19-3-8 上午10:54
  */
@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/8
  */
 public class EmployeeDTO extends WuxSelectOptionDTO {

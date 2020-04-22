@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: DepartmentRepository
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-2-14 下午3:59
  * LastModified: 19-2-14 下午3:59
  */
@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/2/14
  */
 public interface DepartmentRepository extends JpaRepository<Department, String> {

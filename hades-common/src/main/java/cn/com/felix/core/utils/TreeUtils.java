@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-common
  * File Name: TreeUtils.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/11 下午8:02
  * LastModified: 2019/11/8 下午4:16
  */
@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * 树形对象构造工具类
  *
- * @author gengwei.zheng
+ * @author hades
  */
 public class TreeUtils {
 

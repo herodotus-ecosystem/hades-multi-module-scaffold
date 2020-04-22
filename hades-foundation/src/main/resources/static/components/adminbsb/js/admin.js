@@ -43,7 +43,7 @@ $.AdminBSB.options = {
     }
 }
 /*
- * Add By Zhenggengwei
+ * Add By hades
  */
 $.AdminBSB.selectNode = {
     activate: function () {

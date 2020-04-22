@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: AesEncryptUtils
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-1-20 下午4:09
  * LastModified: 19-1-20 下午3:35
  */
@@ -25,7 +25,7 @@ import java.security.Security;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/1/20
  */
 @Slf4j

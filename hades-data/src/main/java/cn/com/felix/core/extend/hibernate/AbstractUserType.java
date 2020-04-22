@@ -6,7 +6,7 @@ import org.hibernate.usertype.UserType;
 import java.io.Serializable;
 
 /**
- * Created by gengwei.zheng on 2017/6/6.
+ * Created by hades on 2017/6/6.
  */
 public abstract class AbstractUserType implements UserType{
 

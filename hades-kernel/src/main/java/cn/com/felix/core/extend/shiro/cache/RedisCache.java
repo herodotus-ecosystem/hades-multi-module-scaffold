@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-kernel
  * File Name: RedisCache.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/10 下午12:07
  * LastModified: 2019/11/7 下午2:27
  */
@@ -37,7 +37,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author gengwei.zheng
+ * @author hades
  */
 public class RedisCache<K, V> implements Cache<K, V> {
 

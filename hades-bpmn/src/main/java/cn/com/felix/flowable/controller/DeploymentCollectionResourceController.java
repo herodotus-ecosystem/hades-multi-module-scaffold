@@ -17,7 +17,7 @@
  * Project Name: hades-multi-module
  * Module Name: hades-bpmn
  * File Name: DeploymentCollectionResource.java
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 2019/11/14 上午11:49
  * LastModified: 2019/11/14 上午11:48
  */
@@ -54,7 +54,7 @@ import java.util.*;
 import java.util.zip.ZipInputStream;
 
 /**
- * @author : gengwei.zheng
+ * @author : hades
  * @description : TODO
  * @date : 2019/11/14 11:30
  */

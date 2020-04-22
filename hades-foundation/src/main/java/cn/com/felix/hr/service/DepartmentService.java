@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: DepartmentService
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-2-14 下午4:00
  * LastModified: 19-2-14 下午4:00
  */
@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/2/14
  */
 

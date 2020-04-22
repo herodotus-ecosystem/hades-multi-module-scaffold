@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: CacheMessageListener
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-30 上午11:15
  * LastModified: 19-3-30 上午11:15
  */
@@ -18,7 +18,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2019/3/30
  */
 public class CacheMessageListener implements MessageListener {

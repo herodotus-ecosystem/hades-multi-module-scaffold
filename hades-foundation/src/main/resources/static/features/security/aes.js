@@ -2,7 +2,7 @@
  * Copyright (c) 2019. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: aes.js
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 19-3-19 下午1:15
  * LastModified: 19-3-19 上午11:15
  */

@@ -19,7 +19,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * @author gengwei.zheng
+ * @author hades
  */
 @Slf4j
 public final class CurrentUser {

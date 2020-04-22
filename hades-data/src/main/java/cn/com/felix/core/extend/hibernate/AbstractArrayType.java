@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.sql.*;
 
 /**
- * Created by gengwei.zheng on 2017/6/7.
+ * Created by hades on 2017/6/7.
  */
 public abstract class AbstractArrayType<T extends Serializable> extends AbstractUserType {
 

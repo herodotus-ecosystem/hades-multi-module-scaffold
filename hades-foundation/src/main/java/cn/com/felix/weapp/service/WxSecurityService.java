@@ -2,7 +2,7 @@
  * Copyright (c) 2018. All Rights Reserved
  * ProjectName: hades-multi-module
  * FileName: WxSecurityService
- * Author: gengwei.zheng
+ * Author: hades
  * Date: 18-12-29 上午8:28
  * LastModified: 18-12-29 上午8:28
  */
@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * <p>Description: </p>
  *
- * @author gengwei.zheng
+ * @author hades
  * @date 2018/12/29
  */
 @Service
