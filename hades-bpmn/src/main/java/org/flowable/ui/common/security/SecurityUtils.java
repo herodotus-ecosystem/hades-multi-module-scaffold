@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 the original author or authors.
+ * Copyright (c) 2019-2020 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
  * limitations under the License.
  *
  *
- * Project Name: hades-multi-module
+ * Project Name: hades-platform
  * Module Name: hades-bpmn
  * File Name: SecurityUtils.java
- * Author: hades
- * Date: 2019/11/2 下午2:20
- * LastModified: 2019/10/31 上午11:50
+ * Author: gengwei.zheng
+ * Date: 2020/6/19 下午6:39
+ * LastModified: 2020/4/22 上午10:30
  */
 
 package org.flowable.ui.common.security;
@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author : hades
+ * @author : gengwei.zheng
  * @description : 覆盖Flowable的SecurityUtis，设置默认用户值
  * @date : 2019/10/28 17:55
  */

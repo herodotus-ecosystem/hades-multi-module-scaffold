@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 the original author or authors.
+ * Copyright (c) 2019-2020 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
  * limitations under the License.
  *
  *
- * Project Name: hades-multi-module
+ * Project Name: hades-platform
  * Module Name: hades-bpmn
- * File Name: DeploymentCollectionResource.java
- * Author: hades
- * Date: 2019/11/14 上午11:49
- * LastModified: 2019/11/14 上午11:48
+ * File Name: DeploymentCollectionResourceController.java
+ * Author: gengwei.zheng
+ * Date: 2020/6/19 下午6:39
+ * LastModified: 2020/4/22 上午10:30
  */
 
 package cn.com.felix.flowable.controller;
@@ -54,7 +54,7 @@ import java.util.*;
 import java.util.zip.ZipInputStream;
 
 /**
- * @author : hades
+ * @author : gengwei.zheng
  * @description : TODO
  * @date : 2019/11/14 11:30
  */

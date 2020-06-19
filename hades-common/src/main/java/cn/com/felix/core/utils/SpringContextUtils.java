@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2019 the original author or authors.
+ * Copyright (c) 2019-2020 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
  * limitations under the License.
  *
  *
- * Project Name: hades-multi-module
- * Module Name: hades-web
+ * Project Name: hades-platform
+ * Module Name: hades-common
  * File Name: SpringContextUtils.java
- * Author: hades
- * Date: 2019/11/3 下午4:22
- * LastModified: 2019/10/26 下午1:02
+ * Author: gengwei.zheng
+ * Date: 2020/6/19 下午6:39
+ * LastModified: 2020/4/22 上午10:30
  */
 
 package cn.com.felix.core.utils;
@@ -31,7 +31,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @description : Spring 工具类
- * @author : hades
+ * @author : gengwei.zheng
  * @date : 2019/11/3 16:22
  */
 @Component
