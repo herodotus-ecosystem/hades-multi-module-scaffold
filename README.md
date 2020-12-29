@@ -30,8 +30,8 @@
 - 后台 system 123456
 
 ### 界面预览
-![登录界面](https://images.gitee.com/uploads/images/2020/0316/182215_68f07c3d_751495.png "微信截图_20200316181847.png")
-![主界面](https://images.gitee.com/uploads/images/2020/0316/182659_10c995be_751495.png "微信截图_20200316181932.png")
+![登录界面](https://github.com/Pointerv/hades-multi-module-scaffold/blob/master/images/182215_68f07c3d_751495.png)
+![主界面](https://github.com/Pointerv/hades-multi-module-scaffold/blob/master/images/182659_10c995be_751495.png)
 
 ### 核心依赖
 依赖 | 版本
