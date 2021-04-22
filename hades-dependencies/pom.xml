@@ -61,7 +61,7 @@
         <apache.commons-lang3.version>3.9</apache.commons-lang3.version>
         <apache.commons-pool2.version>2.7.0</apache.commons-pool2.version>
         <apache.commons-collections4.version>4.0</apache.commons-collections4.version>
-        <apache.shiro.version>1.5.2</apache.shiro.version>
+        <apache.shiro.version>1.7.0</apache.shiro.version>
         <google.zxing.version>3.4.0</google.zxing.version>
 
         <driver.postgresql.version>42.2.8</driver.postgresql.version>
