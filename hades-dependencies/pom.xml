@@ -71,7 +71,7 @@
         <kaptcha.version>2.3.2</kaptcha.version>
         <p6spy.version>3.8.6</p6spy.version>
         <jwt.version>3.8.3</jwt.version>
-        <bcprov-jdk15on.version>1.64</bcprov-jdk15on.version>
+        <bcprov-jdk15on.version>1.67</bcprov-jdk15on.version>
         <jBCrypt.version>0.4.1</jBCrypt.version>
         <jasypt.version>2.1.2</jasypt.version>
 
