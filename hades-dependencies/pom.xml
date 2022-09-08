@@ -64,7 +64,7 @@
         <apache.shiro.version>1.5.2</apache.shiro.version>
         <google.zxing.version>3.4.0</google.zxing.version>
 
-        <driver.postgresql.version>42.2.8</driver.postgresql.version>
+        <driver.postgresql.version>42.4.1</driver.postgresql.version>
 
         <logback.version>1.2.3</logback.version>
         <caffeine.version>2.8.0</caffeine.version>
